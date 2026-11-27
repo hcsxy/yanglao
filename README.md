@@ -168,6 +168,12 @@ npm run dev
 4. 推送到分支（`git push origin feature/AmazingFeature`）
 5. 发起 Pull Request
 
+## 📮 联系方式
+
+有任何使用问题、功能建议或合作意向，欢迎联系我：
+
+- **微信 / QQ**：`hcs2201`
+
 ## 📄 许可证
 
 本项目基于 [MIT](./LICENSE) 许可证开源，框架部分版权归 [若依 RuoYi](https://gitee.com/y_project) 所有。
