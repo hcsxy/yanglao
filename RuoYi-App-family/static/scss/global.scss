@@ -1,0 +1,238 @@
+.text-center {
+	text-align: center;
+}
+
+.font-13 {
+	font-size: 13px;
+}
+
+.font-12 {
+	font-size: 12px;
+}
+
+.font-11 {
+	font-size: 11px;
+}
+
+.text-grey1 {
+	color: #8fa8c9;
+}
+.text-grey2 {
+	color: #7a8ba3;
+}
+
+.list-cell-arrow::before {
+    content: ' ';
+    height: 10px;
+    width: 10px;
+    border-width: 2px 2px 0 0;
+    border-color: rgba(0, 229, 255, 0.6);
+    border-style: solid;
+    -webkit-transform: matrix(0.5, 0.5, -0.5, 0.5, 0, 0);
+    transform: matrix(0.5, 0.5, -0.5, 0.5, 0, 0);
+    position: absolute;
+    top: 50%;
+    margin-top: -6px;
+    right: 30rpx;
+  }
+  
+  .list-cell {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgba(16, 38, 70, 0.72);
+    color: #e6f4ff;
+    padding: 26rpx 30rpx;
+  }
+  
+  .list-cell:first-child {
+    border-radius: 8rpx 8rpx 0 0;
+  }
+  
+  .list-cell:last-child {
+    border-radius: 0 0 8rpx 8rpx;
+  }
+  
+  .list-cell::after {
+    content: '';
+    position: absolute;
+    border-bottom: 1px solid rgba(0, 229, 255, 0.12);
+    -webkit-transform: scaleY(0.5) translateZ(0);
+    transform: scaleY(0.5) translateZ(0);
+    transform-origin: 0 100%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    pointer-events: none;
+  }
+  
+  
+  .menu-list {
+    margin: 15px 15px;
+  
+    .menu-item-box {
+      width: 100%;
+      display: flex;
+      align-items: center;
+  
+      .menu-icon {
+        color: #00e5ff;
+        font-size: 16px;
+        margin-right: 5px;
+      }
+      
+      .text-right {
+        margin-left: auto;
+        margin-right: 34rpx;
+        color: #8fa8c9;
+      }
+    }
+  }
+
+  /* ===================== 科技风主题通用类 ===================== */
+  $tech-cyan: #00e5ff;
+  $tech-blue: #2b7fff;
+  $tech-text: #e6f4ff;
+  $tech-text-sub: rgba(230, 244, 255, 0.55);
+
+  /* 全站默认深色底 */
+  page {
+    background-color: #050d1f;
+    color: $tech-text;
+  }
+
+  /* 背景网格装饰：不拦截点击 */
+  .bg-grid {
+    pointer-events: none;
+  }
+
+  /* 业务页面卡片统一描边（配合各页深色玻璃背景） */
+  .filter-bar,
+  .head-banner,
+  .tabs,
+  .tab-bar,
+  .cate-bar,
+  .stat-row,
+  .grid-body,
+  .task-card,
+  .a-card,
+  .h-card,
+  .o-card,
+  .rec-card,
+  .card,
+  .order-card,
+  .goods-card,
+  .form-card,
+  .setting-card,
+  .menu-list,
+  .childList,
+  .sheet,
+  .popup-body {
+    border: 1rpx solid rgba(0, 229, 255, 0.18);
+  }
+
+  /* 业务页顶部品牌渐变 */
+  .head-banner {
+    background: linear-gradient(135deg, #0083b8, #2b7fff);
+  }
+
+  /* 页面通用深色背景 */
+  .tech-page {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background: linear-gradient(160deg, #050d1f 0%, #0a1a35 45%, #061224 100%);
+    color: $tech-text;
+  }
+
+  /* 玻璃拟态卡片 */
+  .tech-card {
+    position: relative;
+    background: linear-gradient(150deg, rgba(20, 45, 85, 0.55), rgba(8, 20, 40, 0.65));
+    border: 1rpx solid rgba(0, 229, 255, 0.22);
+    border-radius: 20rpx;
+    backdrop-filter: blur(20rpx);
+    box-shadow: 0 12rpx 40rpx rgba(0, 0, 0, 0.35), inset 0 0 30rpx rgba(0, 229, 255, 0.04);
+  }
+
+  /* 卡片四角 HUD 装饰 */
+  .tech-corner {
+    position: absolute;
+    width: 22rpx;
+    height: 22rpx;
+    border-color: $tech-cyan;
+    border-style: solid;
+
+    &.tl { top: -2rpx; left: -2rpx; border-width: 3rpx 0 0 3rpx; border-radius: 10rpx 0 0 0; }
+    &.tr { top: -2rpx; right: -2rpx; border-width: 3rpx 3rpx 0 0; border-radius: 0 10rpx 0 0; }
+    &.bl { bottom: -2rpx; left: -2rpx; border-width: 0 0 3rpx 3rpx; border-radius: 0 0 0 10rpx; }
+    &.br { bottom: -2rpx; right: -2rpx; border-width: 0 3rpx 3rpx 0; border-radius: 0 0 10rpx 0; }
+  }
+
+  /* 发光主按钮 */
+  .tech-btn {
+    position: relative;
+    width: 100%;
+    height: 88rpx;
+    line-height: 88rpx;
+    border-radius: 44rpx;
+    border: none;
+    overflow: hidden;
+    background: linear-gradient(90deg, #00b8d4 0%, #2b7fff 100%);
+    box-shadow: 0 10rpx 30rpx rgba(0, 180, 255, 0.35), 0 0 20rpx rgba(0, 229, 255, 0.2);
+    color: #ffffff !important;
+    font-size: 30rpx;
+    font-weight: 600;
+    letter-spacing: 6rpx;
+    text-align: center;
+
+    &::after {
+      border: none;
+    }
+  }
+
+  /* 科技感区块标题 */
+  .tech-section-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 24rpx;
+    margin: 30rpx 0 16rpx 0;
+
+    .bar {
+      width: 8rpx;
+      height: 30rpx;
+      border-radius: 4rpx;
+      margin-right: 14rpx;
+      background: linear-gradient(180deg, $tech-cyan, $tech-blue);
+      box-shadow: 0 0 12rpx rgba(0, 229, 255, 0.6);
+    }
+
+    .title {
+      font-size: 30rpx;
+      font-weight: 600;
+      color: $tech-text;
+      letter-spacing: 2rpx;
+    }
+
+    .en {
+      margin-left: 14rpx;
+      font-size: 20rpx;
+      letter-spacing: 3rpx;
+      color: rgba(0, 229, 255, 0.55);
+    }
+  }
+
+  .tech-text-main {
+    color: $tech-text;
+  }
+
+  .tech-text-sub {
+    color: $tech-text-sub;
+  }
+
+  .tech-link {
+    color: $tech-cyan;
+    text-shadow: 0 0 10rpx rgba(0, 229, 255, 0.4);
+  }
